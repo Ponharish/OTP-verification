@@ -1,4 +1,4 @@
-#Sample code for otp verification
+#code for otp verification
 
 import smtplib
 
