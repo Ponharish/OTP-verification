@@ -1,5 +1,3 @@
-#code for otp verification
-
 import smtplib
 
 m=input("Please enter your email id: ")
@@ -19,7 +17,7 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
     #You have to login using an app password set separately.
     
     subject = 'OTP Verification'
-    body = 'The OTP to veriby you is ' + str(val)
+    body = 'The OTP to verify you is ' + str(val)
     msg = f'Subject: {subject}\n\n{body}'
     smtp.sendmail('<sender address>',m,msg)
 
@@ -27,7 +25,7 @@ with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 for a in range (1,5):
     ver=int(input('pls enter the opt you have received in your email: '))
     if ver == val:
-        print("You have entered a correct otp")
+        print("You have entered a correct OTP")
         break
     else:
         print("it is not a correct opt you have entered")
